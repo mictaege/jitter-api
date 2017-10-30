@@ -5,4 +5,4 @@
 [![Build Status](https://travis-ci.org/mictaege/jitter-api.svg?branch=develop)](https://travis-ci.org/mictaege/jitter-api)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=com.github.mictaege.jitter-api%3Adevelop)](https://sonarcloud.io/dashboard/index/com.github.mictaege.jitter-api%3Adevelop)
 
-This repository contains the _jitter_ API. For using _jitter_ see the [jitter_plugin](https://github.com/mictaege/jitter_plugin) documentation.
+This repository contains the _jitter_ API. For using _jitter_ see the [jitter-plugin](https://github.com/mictaege/jitter_plugin) documentation.
