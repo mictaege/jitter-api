@@ -18,6 +18,4 @@ public @interface Alter {
 
     String with();
 
-    boolean nested() default false;
-
 }
