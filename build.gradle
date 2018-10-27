@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.github.mictaege'
-version '2018.8'
+version '2018.8.1'
 
 apply plugin: 'java'
 apply plugin: 'jacoco'
