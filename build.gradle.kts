@@ -1,10 +1,9 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.8.10"
     `maven-publish`
     signing
 }
 
-group = "com.github.mictaege"
+group = "io.github.mictaege"
 version = "2024.1"
 
 tasks.wrapper {
@@ -14,7 +13,6 @@ tasks.wrapper {
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 tasks.test {
@@ -22,6 +20,8 @@ tasks.test {
 }
 
 java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
     withJavadocJar()
     withSourcesJar()
 }
