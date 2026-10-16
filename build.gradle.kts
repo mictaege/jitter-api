@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "io.github.mictaege"
-version = "2026.3-rc3"
+version = "2026.3-rc4"
 
 tasks.wrapper {
     gradleVersion = "9.8.0"
