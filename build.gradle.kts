@@ -5,14 +5,14 @@ plugins {
     `java-library`
     `maven-publish`
     signing
-    id("org.jreleaser") version "1.18.0"
+    id("org.jreleaser") version "1.27.0"
 }
 
 group = "io.github.mictaege"
 version = "2026.3"
 
 tasks.wrapper {
-    gradleVersion = "9.8.0"
+    gradleVersion = "9.8.2"
     distributionType = Wrapper.DistributionType.ALL
 }
 
