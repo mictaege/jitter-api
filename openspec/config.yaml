@@ -1,0 +1,27 @@
+schema: spec-driven
+
+context: |
+  jitter-api contains the public API of jitter: the annotations and contracts that application
+  code uses to mark flavour-specific source code (@OnlyIf/@Fork/@Alter/@AlterConstValue/
+  @InlinedConstantApproved/@Tags) so it can be included/excluded when building different
+  variants (flavours) of an application from a single source base. It has no behaviour of its
+  own beyond defining this API — the transformation happens in jitter-plugin.
+
+  Family: lowest-level, dependency-free module of the jitter family (store `jitter`,
+  ~/openspec/jitter, use `openspec ... --store jitter` for family-wide planning). jitter-plugin
+  depends on this module and re-exposes its annotations to consumers; eval.jitter is the
+  reference demo consumer.
+
+  Stack: Java (src/main/java only, no test sources), Gradle Kotlin DSL (build.gradle.kts),
+  java-library; build via ./gradlew. Published via org.jreleaser to Maven Central as
+  io.github.mictaege:jitter-api. License Apache-2.0. Credentials from Gradle properties/env only.
+
+  Conventions for changes:
+  - The annotation contract is consumed by annotation processing / the ASM-based stripping in
+    jitter-plugin — treat any change here as a potential breaking API change.
+  - Keep the module dependency-free and minimal (lightweight compile-time API).
+  - Favor small, additive, backward-compatible API changes; coordinate version bumps with
+    jitter-plugin (it depends on a specific jitter-api version).
+
+  Capability specs: openspec/specs/annotations/spec.md. AGENTS.md maps areas to specs.
+  User-facing docs: README.md (jitter-plugin's README documents the annotation semantics).
